@@ -2,3 +2,4 @@
 /* #home #menuToggle {background: rgba(255, 255, 255, 0.8)} */
 #home .header-background #v-card-holder #v-card a {color: #fff}
 .modal-footer .btn-default {color: #eaeaea}
+#portfolios #portfolios-card .tab-content .grid figure img {opacity: 0.95}
