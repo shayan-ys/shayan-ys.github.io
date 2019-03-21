@@ -1,0 +1,13 @@
+body {
+    background-color: #F5F5F5;
+}
+.my-gallery figure {
+    margin-bottom: 21px;
+}
+.my-gallery figure img {
+    width: 100%;
+    height: auto;
+}
+.my-gallery figcaption {
+    text-align: center;
+}
