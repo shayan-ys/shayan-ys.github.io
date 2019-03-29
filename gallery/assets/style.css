@@ -1,6 +1,9 @@
 body {
     background-color: #F5F5F5;
 }
+header {
+    background: #fff;
+}
 .my-gallery figure {
     margin-bottom: 21px;
 }
