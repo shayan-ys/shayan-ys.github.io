@@ -23,3 +23,9 @@
 #portfolios .gallery-btn .btn:hover {
     background: #046c40;
 }
+
+#project ul li {
+    list-style: disc;
+    color: #333333;
+    margin-top: 5px;
+}
