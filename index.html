@@ -62,32 +62,14 @@
     <!-- ANIMATION -->
     <link href="stylesheets/animate.min.css" rel="stylesheet">
 
-
     <!-- MATERIALIZE -->
     <link href="stylesheets/materialize.css" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- CUSTOM STYLE -->
     <link href="stylesheets/style.css" id="switch_style" rel="stylesheet">
-    <link href="stylesheets/mystyle.css" id="my_style" rel="stylesheet">
 
-    <style>
-        @media only screen and (min-width: 768px) {
-            .timeline-block {
-                margin: -6em 0;
-            }
-        }
-        .modal ul li {
-            list-style-type: square;
-        }
-        #about .about-btn .btn.btn-outline {
-            border: 1px solid #06A763;
-            color: #06A763;
-            background: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -95,7 +77,7 @@
 <!--==========================================
                   PRE-LOADER
 ===========================================-->
-<div id="loading" style="display:none">
+<div id="loading">
     <div id="loading-center">
         <div id="loading-center-absolute">
             <div class="box-holder animated bounceInDown">
@@ -109,7 +91,11 @@
         </div>
     </div>
 </div>
-<script>document.getElementById("loading").removeAttribute("style")</script>
+<noscript>
+    <style>
+        #loading {display: none;}
+    </style>
+</noscript>
 
 <!--==========================================
                     HEADER
