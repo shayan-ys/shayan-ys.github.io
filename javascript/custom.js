@@ -91,137 +91,13 @@
             }
 
         });
-
-
-        /***PORTFOLIO***/
-        $('li.list-shuffle,#add-more').on('click', function () {
-            $(".inLeft")
-                .removeClass('InLeft')
-                .hide()
-                .addClass('InLeft')
-                .show();
-            $(".inRight")
-                .removeClass('InRight')
-                .hide()
-                .addClass('InRight')
-                .show();
-        });
-
-
+        
         /***SKILLS***/
         $('div.skillbar').each(function () {
             $(this).find('div.skillbar-bar').css({
                 width: $(this).attr('data-percent')
             });
         });
-
-
-
-        /***CLIENT SLIDER***/
-        function clint() {
-            var $clientcarousel = $('ul#clients-list');
-            var clients = $clientcarousel.children().length;
-            var clientwidth = (clients * 140); // 140px width for each client item
-            $clientcarousel.css('width', clientwidth);
-
-            var rotating = true;
-            var clientspeed = 1800;
-            setInterval(rotateClients, clientspeed);
-
-            $(document).on({
-                mouseenter: function () {
-                    rotating = false;
-                    // Turn off rotation when hovering
-                },
-                mouseleave: function () {
-                    rotating = true;
-                }
-            }, '#clients');
-
-            function rotateClients() {
-                if (rotating !== false) {
-                    var $first = $('ul#clients-list').find('li:first');
-                    $first.animate({'margin-left': '-140px'}, 2000, function () {
-                        $first.remove().css({'margin-left': '0px'});
-                        $('ul#clients-list').find('li:last').after($first);
-                    });
-                }
-            }
-        }
-
-        /***CLIENT SLIDER INITIALIZATION***/
-        clint();
-
-        /***GOOGLE MAP***/
-        function init() {
-            var mapOptions = {
-                zoom: 17,
-                center: new google.maps.LatLng(51.5287352, -0.3817831),
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                scrollwheel: false,
-                disableDefaultUI: false
-            };
-
-            var myMap = new google.maps.Map(document.getElementById('myMap'), mapOptions);
-
-            new MarkerWithLabel({
-                position: myMap.getCenter(),
-                icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
-                    scale: 0
-                },
-                map: myMap,
-                labelAnchor: new google.maps.Point(10, 10),
-                labelClass: "map-label", // The CSS class for the label
-                draggable: false
-
-            });
-        }
-
-        /***GOOGLE MAP INITIALIZATION***/
-        init();
-
-        /***CAROUSAL SWIPE***/
-        $(".carousel-inner").swipe( {
-            //Generic swipe handler for all directions
-            swipeLeft:function() {
-                $(this).parent().carousel('next');
-            },
-            swipeRight: function() {
-                $(this).parent().carousel('prev');
-            },
-            //Default is 75px, set to 0 for demo so any distance triggers swipe
-            threshold:0
-        });
-
-
-        /***MAIL SCRIPT***/ // Upadted in V. 1.1
-        $('form#contact-form').on('submit', function (e) {
-            e.preventDefault(); //Prevents default submit
-            var form = $(this);
-            $("#submit").attr('disabled', 'disabled'); //Disable the submit button on click
-            var post_data = form.serialize(); //Serialized the form data 
-            $('div#form-loader').removeClass('is-hidden').fadeIn(500);
-            $.ajax({
-                type: 'POST',
-                url: 'php/mail_handler.php', // Form script
-                data: post_data
-            })
-                .done(function () {
-                    $('div#form-loader').fadeOut(500);
-                    Materialize.toast('Message Sent! I will contact you shortly, Thanks', 4000);
-                    $("form#contact-form")[0].reset();
-                    Materialize.updateTextFields(); // Rest floating labels
-                    $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
-
-                })
-                .fail(function () {
-                    $('div#form-loader').fadeOut(500);
-                    Materialize.toast('Sorry! Something Wrong, Try Again', 4000);
-                    $("#submit").removeAttr('disabled', 'disabled'); // Enable submit button
-                });
-        });
-
 
     });
 
@@ -242,7 +118,4 @@
         sr.reveal('#v-card-holder', {duration: 1400, distance: '150px'});
         sr.reveal('.skillbar-bar', {duration: 1800, delay: 300, distance: '0'});});
 
-
 })(jQuery);
-
-

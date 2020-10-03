@@ -1,0 +1,39 @@
+/* Colours */
+.social.blue.darken-3 {
+    background-color: #1565C0
+}
+.social.blue {
+    background-color: #2196F3
+}
+.social.grey.darken-3 {
+    background-color: #424242
+}
+.social.red {
+    background-color: #F44336
+}
+
+/* Style */
+.btn-floating {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+.btn-floating, .btn-floating i {
+    line-height: 37px;
+    display: inline-block;
+}
+
+.social {
+    padding-top: 5px
+}
+.social svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}

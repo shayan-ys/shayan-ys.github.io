@@ -144,6 +144,7 @@ html, body {
   transition: box-shadow .25s;
   border-radius: 2px;
   margin: 8px 0;
+  padding-bottom: 13px;
   .card-content {
     /*card content*/
     padding: 40px;
@@ -240,4 +241,8 @@ html, body {
   border: 1px solid #06A763;
   color: #06A763;
   background: none;
+}
+
+.btn, .btn-floating, .btn-large, .card, .card-panel, .collapsible, .dropdown-content, .side-nav, .toast, .z-depth-1, nav {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }

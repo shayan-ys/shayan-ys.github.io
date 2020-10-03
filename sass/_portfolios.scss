@@ -286,3 +286,25 @@
   }
 }
 
+#add-more {
+  user-select: none;
+  z-index: 1;
+  will-change: opacity,transform;
+  overflow: hidden;
+  height: 54px;
+  line-height: 56px;
+  text-decoration: none;
+  outline: 0;
+  border: none;
+  padding: 3px 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+
+  i {
+    font-size: 1.6rem;
+  }
+}
+#add-more:hover {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}

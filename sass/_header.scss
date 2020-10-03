@@ -215,10 +215,12 @@
         .infos {
           /*detailed infos*/
           max-width: 515px;
-          margin-top: 99px;
+          margin-top: 40px;
           .profile-list {
+            padding-left: 0;
             /*list*/
             li {
+              list-style: none;
               margin-top: 3px;
             }
             .title {
@@ -268,7 +270,10 @@
           @include screen_400 {
             .social {
               /*making links responsive*/
-              margin-left: 5px;
+              margin-left: 15px;
+              &:first-child {
+                margin-left: 0;
+              }
             }
           }
         }
@@ -446,6 +451,10 @@
 
         h6 {
           margin-bottom: 20px;
+        }
+
+        h4 {
+          padding-top: 12px;
         }
       }
       .card-content {

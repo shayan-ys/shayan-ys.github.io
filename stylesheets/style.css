@@ -291,6 +291,7 @@ html .btn, body .btn {
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   border-radius: 2px;
   margin: 8px 0;
+  padding-bottom: 13px;
 }
 
 .card .card-content {
@@ -414,6 +415,11 @@ html .btn, body .btn {
   border: 1px solid #06A763;
   color: #06A763;
   background: none;
+}
+
+.btn, .btn-floating, .btn-large, .card, .card-panel, .collapsible, .dropdown-content, .side-nav, .toast, .z-depth-1, nav {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 /*
@@ -830,14 +836,16 @@ html .btn, body .btn {
 #home .header-background #v-card-holder #v-card .infos {
   /*detailed infos*/
   max-width: 515px;
-  margin-top: 99px;
+  margin-top: 40px;
 }
 
 #home .header-background #v-card-holder #v-card .infos .profile-list {
+  padding-left: 0;
   /*list*/
 }
 
 #home .header-background #v-card-holder #v-card .infos .profile-list li {
+  list-style: none;
   margin-top: 3px;
 }
 
@@ -893,7 +901,10 @@ html .btn, body .btn {
 @media screen and (max-width: 400px) {
   #home .header-background #v-card-holder #v-card .links .social {
     /*making links responsive*/
-    margin-left: 5px;
+    margin-left: 15px;
+  }
+  #home .header-background #v-card-holder #v-card .links .social:first-child {
+    margin-left: 0;
   }
 }
 
@@ -1068,10 +1079,58 @@ html .btn, body .btn {
   #home .header-background #v-card-holder #v-card .info-headings h6 {
     margin-bottom: 20px;
   }
+  #home .header-background #v-card-holder #v-card .info-headings h4 {
+    padding-top: 12px;
+  }
   #home .header-background #v-card-holder #v-card .card-content {
     /*content padding*/
     padding: 10px;
   }
+}
+
+/* Colours */
+.social.blue.darken-3 {
+  background-color: #1565C0;
+}
+
+.social.blue {
+  background-color: #2196F3;
+}
+
+.social.grey.darken-3 {
+  background-color: #424242;
+}
+
+.social.red {
+  background-color: #F44336;
+}
+
+/* Style */
+.btn-floating {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.btn-floating, .btn-floating i {
+  line-height: 37px;
+  display: inline-block;
+}
+
+.social {
+  padding-top: 5px;
+}
+
+.social svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
 }
 
 /*
@@ -1102,11 +1161,17 @@ html .btn, body .btn {
   color: #ffffff;
   width: 180px;
   border-radius: 2px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
 }
 
 #about .about-btn .btn:hover {
-  /*hover effect*/
-  background: #046c40;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*
@@ -1286,7 +1351,7 @@ html .btn, body .btn {
     /*vertical line for education in in min width 768 */
     left: 50%;
     margin-left: -2px;
-    height: 77.1%;
+    height: 74.1%;
     opacity: 0.4;
     background: #06A763;
   }
@@ -1294,7 +1359,7 @@ html .btn, body .btn {
     /*vertical line for experience in min width 768 */
     left: 50%;
     margin-left: -2px;
-    height: 69.1%;
+    height: 82%;
     opacity: 0.4;
     background: #06A763;
   }
@@ -1711,6 +1776,34 @@ html .btn, body .btn {
   animation-duration: .8s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+#add-more {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 1;
+  will-change: opacity,transform;
+  overflow: hidden;
+  height: 54px;
+  line-height: 56px;
+  text-decoration: none;
+  outline: 0;
+  border: none;
+  padding: 3px 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#add-more i {
+  font-size: 1.6rem;
+}
+
+#add-more:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*

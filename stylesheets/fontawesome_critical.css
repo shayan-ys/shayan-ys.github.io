@@ -1,0 +1,15 @@
+.fa-envelope:before {
+    content: "@";
+}
+.fa-skype:before {
+    content: "S";
+}
+.fa-map-marker-alt:before {
+    content: "V";
+}
+.fa-user-plus:before {
+    content: "+";
+}
+.fa-angle-up:before {
+    content: "^";
+}
