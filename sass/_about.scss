@@ -3,9 +3,20 @@
 //===========================================================================//
 @import "variables";
 /*about section*/
-#about {
-  /*profile about*/
-  margin-top: 200px;
+.about-or-hire {
+  &#about {
+    /*profile about*/
+    margin-top: 200px;
+  }
+
+  .card-content {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
 
   .about-btn {
     /*about buttons*/

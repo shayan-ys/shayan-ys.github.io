@@ -411,7 +411,7 @@ html .btn, body .btn {
   list-style-type: square;
 }
 
-#about .about-btn .btn.btn-outline {
+.about-or-hire .about-btn .btn.btn-outline {
   border: 1px solid #06A763;
   color: #06A763;
   background: none;
@@ -1139,12 +1139,21 @@ html .btn, body .btn {
 -------------------------------------------------------------------------------
 */
 /*about section*/
-#about {
+.about-or-hire#about {
   /*profile about*/
   margin-top: 200px;
 }
 
-#about .about-btn {
+.about-or-hire .card-content {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.about-or-hire h1, .about-or-hire h2, .about-or-hire h3, .about-or-hire h4 {
+  text-align: center;
+}
+
+.about-or-hire .about-btn {
   /*about buttons*/
   height: auto;
   margin-right: auto;
@@ -1154,7 +1163,7 @@ html .btn, body .btn {
   text-align: center;
 }
 
-#about .about-btn .btn {
+.about-or-hire .about-btn .btn {
   /*button style*/
   margin: 7px 7px;
   background: #06A763;
@@ -1169,7 +1178,7 @@ html .btn, body .btn {
   transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
 }
 
-#about .about-btn .btn:hover {
+.about-or-hire .about-btn .btn:hover {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }

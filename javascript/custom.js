@@ -114,7 +114,7 @@
             '#portfolios-card,#interest-card,#p-one,#p-two,#p-three,#blog-card,#contact-card,#clients';
         // Customizing a reveal set
         sr.reveal(commonCards, {duration: 1100});
-        sr.reveal('#about-card,.map-label', {duration: 1400, delay: 500});
+        sr.reveal('#about-card,#hire-card', {duration: 1400, delay: 500});
         sr.reveal('#v-card-holder', {duration: 1400, distance: '150px'});
         sr.reveal('.skillbar-bar', {duration: 1800, delay: 300, distance: '0'});});
 
